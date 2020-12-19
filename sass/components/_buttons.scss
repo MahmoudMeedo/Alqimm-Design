@@ -1,0 +1,51 @@
+/* Haeder Button */
+
+%btnPseudoElementsPosition {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 4px;
+    background-color: $secColor;
+    @include prefixer(transition, all 0.3s ease-in-out, webkit moz o);
+}
+
+%headerBtn {
+    position: relative;
+    font-size: 22px;
+    color: $fontColor;
+    background-color: $primColor;
+    padding: 10px 20px;
+    &:before {
+        @extend %btnPseudoElementsPosition;
+        top: -4px;
+        left: 0;
+    }
+    &:after {
+        @extend %btnPseudoElementsPosition;
+        bottom: -4px;
+        right: 0;
+    }
+    &:hover {
+        &:before,
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+
+/* Page Button */
+
+%pageBtn {
+    a {
+        text-decoration: none;
+        background-color: $secColor;
+        padding: 15px 10px;
+        font-size: 18px;
+        text-transform: uppercase;
+        @include prefixer(border-radius, 10px, webkit moz o);
+        &:hover {
+            color: $fontColor;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.clients {
+    padding: 60px 0;
+    background-color: $fontColor;
+    .clients-heading {
+        margin-bottom: 40px;
+    }
+    .glider-dots {
+        margin-top: 50px;
+    }
+    .glider-next,
+    .glider-prev {
+        top: 20%;
+    }
+}

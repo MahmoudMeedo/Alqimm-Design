@@ -1,0 +1,21 @@
+.main-heading {
+    color: $primColor;
+    text-align: center;
+    .adjust {
+        position: relative;
+        span {
+            position: absolute;
+            bottom: 10px;
+            left: calc(50% - 80px);
+            width: 60px;
+            height: 2px;
+            background-color: $secColor;
+            &:last-child {
+                left: calc(50% + 20px);
+            }
+        }
+        i {
+            color: $secColor;
+        }
+    }
+}

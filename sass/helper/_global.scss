@@ -1,0 +1,131 @@
+* {
+    font-family: "Maven Pro", sans-serif;
+}
+
+.exclude-overlay {
+    position: relative;
+    z-index: 5;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #fff;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Positioning In The Middle Of The Div
+%positionCentering {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include prefixer(transform, translate(-50%, -50%), webkit moz o);
+}
+
+// Overlay
+%overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($primColor, 0.4);
+}
+
+// Define The Main Color Of The Selction
+::-moz-selection {
+    background-color: $primColor;
+    color: #fff;
+}
+
+::selection {
+    background-color: $primColor;
+    color: #fff;
+}
+
+// Scroll Top Buttonr Button
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: -60px;
+    z-index: 100;
+    @include prefixer(transition, all 0.2s ease-in-out, webkit moz o);
+    i {
+        width: 50px;
+        height: 50px;
+        line-height: 47px;
+        background-color: $secColor;
+        color: #fff;
+        border: 2px solid $secColor;
+        cursor: pointer;
+        @include prefixer(border-radius, 5px, webkit moz o);
+        @include prefixer(transition, all 0.4s ease-in-out, webkit moz o);
+        &:hover {
+            color: $fontColor;
+        }
+    }
+}
+
+
+/* Overlay Loading */
+
+.overpage {
+    position: fixed;
+    background-color: $primColor;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 4545;
+    .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        span {
+            position: absolute;
+            top: 0;
+            width: 6px;
+            height: 20px;
+            background-color: $secColor;
+            animation: growing 0.3s infinite ease-in-out alternate-reverse;
+            &:first-child {
+                left: 0;
+            }
+            &:nth-child(2) {
+                left: 12px;
+                animation-delay: 0.2s;
+            }
+            &:nth-child(3) {
+                left: 24px;
+                animation-delay: 0.4s;
+            }
+            &:nth-child(4) {
+                left: 36px;
+                animation-delay: 0.6s;
+            }
+            &:nth-child(5) {
+                left: 48px;
+                animation-delay: 0.8s;
+            }
+            &:last-child {
+                left: 60px;
+                animation-delay: 1s;
+            }
+        }
+    }
+    @keyframes growing {
+        from {
+            transform: scale(1.5);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+}

@@ -1,0 +1,114 @@
+/* Start Company Site */
+
+.company-site {
+    padding: 20px 0 60px;
+    .container {
+        margin-top: 40px;
+    }
+    .contact-details-info {
+        @media #{$maxMedium} {
+            margin-top: 30px;
+        }
+        .con-text {
+            border-bottom: 1px solid $fontColor;
+            padding: 0 20px 10px;
+            &:last-child {
+                border: none;
+            }
+            h4 {
+                font-size: 16px;
+                margin: 20px 0;
+            }
+            p {
+                i {
+                    color: $secColor;
+                    margin-right: 10px;
+                }
+            }
+            &.social-links {
+                h4 {
+                    margin-top: 0;
+                }
+                a {
+                    i {
+                        color: $primColor;
+                        margin: 0 10px;
+                        &:hover {
+                            color: $secColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Start Footer */
+
+footer {
+    padding-top: 20px;
+    color: $fontColor;
+    position: relative;
+    &:after {
+        content: "";
+        @extend %overlay;
+        background-color: black;
+        z-index: 1;
+    }
+    .logo {
+        img {
+            max-width: 50%;
+        }
+        p {
+            margin: 20px 0;
+        }
+    }
+    .footer-links {
+        h3 {
+            font-weight: bold;
+            font-size: 30px;
+            margin: 10px 0 20px;
+            color: $secColor;
+        }
+        ul {
+            padding: 0 10px 20px;
+            li {
+                margin: 5px 0;
+                a {
+                    &:hover {
+                        color: $secColor;
+                    }
+                }
+            }
+        }
+    }
+    .footer-projects {
+        h3 {
+            font-weight: bold;
+            font-size: 30px;
+            margin: 10px 0 20px;
+            color: $secColor;
+        }
+        .project-photos {
+            .project-photo {
+                padding: 0 15px 5px;
+                img {
+                    max-width: 23%;
+                }
+            }
+        }
+    }
+    .copyright {
+        padding: 20px 0;
+        border-top: 1px solid $fontColor;
+        box-shadow: 0px 20px 20px 9px $fontColor;
+        h3 {
+            margin: 0;
+            span {
+                color: $secColor;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

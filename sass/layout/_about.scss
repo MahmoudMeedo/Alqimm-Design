@@ -1,0 +1,121 @@
+/* Start About Style */
+
+.about {
+    padding: 40px 0;
+    .about-heading {
+        margin-bottom: 60px;
+    }
+    .about-content {
+        >.container {
+            .row {
+                @media #{$maxMobile} {
+                    margin: 0;
+                }
+            }
+        }
+        .about-img {
+            position: relative;
+            background-image: url("../img/about.jpg");
+            height: 500px;
+            background-size: cover;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                bottom: -15px;
+                left: -15px;
+                background-color: $secColor;
+                z-index: -1;
+            }
+        }
+        .about-words {
+            padding: 0 40px;
+            @media #{$maxMedium} {
+                margin-top: 40px;
+                padding-left: 0;
+            }
+            .our-company {
+                h3 {
+                    color: $secColor;
+                    padding: 0 10px;
+                    border-left: 3px solid $secColor;
+                    margin-bottom: 20px;
+                }
+                p {
+                    line-height: 1.8;
+                    font-size: 20px;
+                }
+            }
+            .about-fields {
+                padding: 40px 0;
+                .field {
+                    @media #{$maxMobile} {
+                        padding-left: 0;
+                    }
+                    &-icon {
+                        i {
+                            border: 2px solid $secColor;
+                            width: 60px;
+                            height: 60px;
+                            line-height: 60px;
+                            text-align: center;
+                            background-color: $secColor;
+                            color: #fff;
+                            @include prefixer(border-radius,
+                            50%,
+                            webkit moz o);
+                            @include prefixer(transition,
+                            all 0.3s ease-in-out,
+                            webkit moz o);
+                            &:hover {
+                                background-color: transparent;
+                                color: $secColor;
+                            }
+                        }
+                    }
+                    &-description {
+                        .field-title {
+                            color: $primColor;
+                            font-weight: bold;
+                        }
+                        .field-context {
+                            font-size: 14px;
+                            line-height: 1.6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Start Manager Word Style */
+
+.manager-word {
+    position: relative;
+    padding: 20px 0;
+    background-image: url("../img/manager.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    &:after {
+        content: "";
+        @extend %overlay;
+        background-color: rgba($primColor, 0.8);
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    .manager-heading {
+        font-size: 45px;
+        text-transform: uppercase;
+        color: $secColor;
+    }
+    .manager-description {
+        line-height: 1.7;
+        font-size: 20px;
+        color: #fff;
+    }
+}

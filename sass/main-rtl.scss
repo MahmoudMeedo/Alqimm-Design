@@ -1,0 +1,58 @@
+/* Import Files */
+
+@import "helper/mixins";
+
+/* Strat Header */
+
+header {
+    .header-slider .carousel-inner .carousel-overlay h1 span:first-child {
+        font-family: "Cairo", sans-serif !important;
+    }
+    nav {
+        .navbar-brand {
+            margin-right: 0;
+        }
+    }
+}
+
+
+/* Start About */
+
+.about {
+    .about-content {
+        .about-words {
+            .our-company {
+                h3 {
+                    border: none;
+                    border-right: 3px solid #f57f27;
+                }
+            }
+        }
+    }
+}
+
+
+/* Start Vision Section */
+
+.vision-section {
+    @include prefixer(transform, scale(-1, 1), webkit moz o);
+    .container {
+        @include prefixer(transform, scale(-1, 1), webkit moz o);
+        position: relative;
+        z-index: 545;
+    }
+}
+
+
+/* Start Principles */
+
+.principles .principles-boxes .principles-box {
+    margin: 0;
+}
+
+
+/* Start Projects */
+
+.projects .projects-gallery .gallery-box .gallery-img .gallery-overlay-desc .gallery-title:before {
+    right: 0;
+}

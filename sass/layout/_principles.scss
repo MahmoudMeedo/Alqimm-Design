@@ -1,0 +1,47 @@
+.principles {
+    padding: 40px 0;
+    .about-heading {
+        margin-bottom: 60px;
+    }
+    .principles-description {
+        font-size: 22px;
+        margin: 40px 0;
+    }
+    .principles-boxes {
+        margin-top: 40px;
+        .principles-box {
+            margin-top: 20px;
+            box-shadow: 0px 10px 20px 0px #d4d4d4;
+            margin-right: 10px;
+            padding: 15px;
+            @include prefixer(border-radius, 5px, webkit moz o);
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                &:after {
+                    height: 8px;
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0;
+                background-color: $secColor;
+                @include prefixer(transition, all 0.2s ease-in-out, webkit moz o);
+            }
+            i {
+                color: $secColor;
+            }
+            .principles-boxes-title {
+                text-transform: uppercase;
+                margin: 20px 0;
+            }
+            .principles-boxes-description {
+                line-height: 1.6;
+            }
+        }
+    }
+}
